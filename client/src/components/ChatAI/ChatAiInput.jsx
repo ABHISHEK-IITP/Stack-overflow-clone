@@ -8,9 +8,10 @@ export const ChatAiInput = () => {
   const chatAi = useSelector((state) => state.chatReducer);
   const error = useSelector((state) => state.errorReducer);
   const dispatch = useDispatch();
+  const User = useSelector((state) => (state.currentUserReducer))
 
   const handleSubmit = (e) => {
-    dispatch(postChat(value));
+    dispatch(postChat(User?.result?._id, value));
     console.log(value, "value");
   };
 

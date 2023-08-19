@@ -9,6 +9,9 @@ import DisplayQuestion from './pages/Questions/DisplayQuestion'
 import Tags from "./pages/Tags/Tags";
 import Users from "./pages/Users/Users";
 import UserProfile from "./pages/UserProfile/UserProfile";
+// import PrivateRoute from "./PrivateRoutes";
+import Subscription from './pages/Subscription/Subscription'
+import ChatAI from "./pages/ChatAI/ChatAI";
 
 const AllRoutes = ({ slideIn, handleSlideIn }) => {
   return (
@@ -19,9 +22,11 @@ const AllRoutes = ({ slideIn, handleSlideIn }) => {
             <Route path='/Questions' element={<Questions/>}/>
             <Route path='/AskQuestion' element={<AskQuestion/>}/>
             <Route path='/Questions/:id' element={<DisplayQuestion/>}/>
-            <Route path="/Tags" element={<Tags slideIn={slideIn} handleSlideIn={handleSlideIn} />}/>
-            <Route path="/Users" element={<Users slideIn={slideIn} handleSlideIn={handleSlideIn} />}/>
-            <Route path="/Users/:id" element={<UserProfile slideIn={slideIn} handleSlideIn={handleSlideIn} />}/>
+            <Route path='/Subscription' element={<Subscription/>}/>
+            <Route path='/ChatAi' element={<ChatAI />} />
+            <Route path="/Tags" element={<Tags />}/>
+            <Route path="/Users" element={<Users  />}/>
+            <Route path="/Users/:id" element={<UserProfile  />}/>
         </Routes>
     </div>
   )

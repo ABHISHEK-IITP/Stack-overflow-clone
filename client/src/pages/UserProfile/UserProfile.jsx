@@ -4,6 +4,7 @@ import { useParams } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBirthdayCake, faPen } from "@fortawesome/free-solid-svg-icons";
 import moment from "moment";
+import useRandomColor from '../../hook/useRandomColor'
 
 import LeftSidebar from "../../components/LeftSidebar/LeftSidebar";
 import Avatar from "../../components/Avatar/Avatar";
@@ -11,22 +12,23 @@ import EditProfileForm from "./EditProfileForm";
 import ProfileBio from "./ProfileBio";
 import "./UsersProfile.css";
 
-const UserProfile = ({ slideIn, handleSlideIn }) => {
+const UserProfile = () => {
   const { id } = useParams();
   const users = useSelector((state) => state.usersReducer);
   const currentProfile = users.filter((user) => user._id === id)[0];
   const currentUser = useSelector((state) => state.currentUserReducer);
   const [Switch, setSwitch] = useState(false);
+  const color = useRandomColor();
 
   return (
     <div className="home-container-1">
-      <LeftSidebar slideIn={slideIn} handleSlideIn={handleSlideIn} />
+      <LeftSidebar  />
       <div className="home-container-2">
         <section>
           <div className="user-details-container">
             <div className="user-details">
               <Avatar
-                backgroundColor="purple"
+                backgroundColor={`#${color}`}
                 color="white"
                 fontSize="50px"
                 px="40px"

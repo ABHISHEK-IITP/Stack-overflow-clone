@@ -1,8 +1,9 @@
 import React from "react";
+
 import Avatar from "../Avatar/Avatar";
 import { useSelector } from "react-redux";
 export const ChatUserMessageBox = ({ message }) => {
-  const currentUser = useSelector((state) => state.currentUserReducer);
+  const currentUser = useSelector((state) => state.currentUserReducer)?.result;
 
   return (
     <div className="chat-message-box">

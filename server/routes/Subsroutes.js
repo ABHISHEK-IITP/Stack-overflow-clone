@@ -12,4 +12,4 @@ router.post("/order", auth, order);
 router.post("/is-order-complete", auth, verifyOrder);
 router.get("/check-subscription/:id", auth, checkSubscription);
 
-export default router; 
+export default router;

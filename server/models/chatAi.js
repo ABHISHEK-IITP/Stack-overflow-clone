@@ -5,7 +5,8 @@ const chatSchema = mongoose.Schema({
   userId: { type: Types.ObjectId, ref: "User", required: true },
   chat: [
     {
-      content: { type: String, required: "Message is required" },
+      message: { type: String, required: "Message is required" },
+      contentType: { type: String },
       role: { type: String },
     },
   ],

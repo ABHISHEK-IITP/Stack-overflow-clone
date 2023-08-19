@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { checkSubscription, handlePayment } from "../../actions/subscriptions";
+import { checkSubscription, handlePayment } from "../../actions/subscription";
 import LeftSidebar from "../../components/LeftSidebar/LeftSidebar";
 import "./Subscription.css";
 import { useNavigate } from "react-router-dom";
@@ -32,17 +32,17 @@ const Subscription = () => {
     {
       value: 0,
       label: "Free",
-      description: "can ask 1 question per day",
+      description: "Asking limit : 1 Question/day",
     },
     {
       value: 100,
       label: "Silver",
-      description: "can ask upto 5 question per day",
+      description: "Asking limit : 5 Questions/day",
     },
     {
       value: 1000,
       label: "Gold",
-      description: "can ask unlimit question per day",
+      description: "Asking limit : Unlimited ",
     },
   ];
 
@@ -50,7 +50,7 @@ const Subscription = () => {
     <div className="home-container-1">
       <LeftSidebar />
       <div className="home-container-2">
-        <h2>Choose your plan</h2>
+        <h2 style={{ textAlign: "center", marginTop: "50px" }} >Choose your plan</h2>
         <div className="subs-container">
           {options.map(({ label, value, description }) => (
             <section className="plan-container" key={label}>
@@ -68,8 +68,8 @@ const Subscription = () => {
                 {subscription
                   ? label.toLocaleLowerCase() === subscription
                     ? "subscripted"
-                    : "do subscription"
-                  : "do subscription"}
+                    : "BUY NOW"
+                  : "BUY NOW"}
               </button>
             </section>
           ))}
@@ -80,7 +80,7 @@ const Subscription = () => {
           card number: 4111 1111 1111 1111 <br />
           card expiry date: 10/45 <br /> card cvv: 123 <br /> OTP: 123456 <br />
           <br />
-          This card details for only testing purpose
+          NOTE : This card details is for only testing purposes
         </p>
       </div>
     </div>

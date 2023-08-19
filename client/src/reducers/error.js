@@ -10,12 +10,3 @@ const errorReducer = (states = {}, action) => {
   };
   
   export default errorReducer;
-  
-  /**
-   * *   {
-   * * success:boolean,
-   * * message: string
-   * * location : string
-   * ? ^^^^^^^^ current window location herf
-   * * }
-   */

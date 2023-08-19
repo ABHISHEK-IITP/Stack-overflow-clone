@@ -8,6 +8,8 @@ export const askQuestion = (questionData, navigate)=> async (dispatch)=>{
         navigate('/');
 
     } catch (error) {
+        navigate("/subscription");
+        alert("Please update the subscription to ask more question");
         console.log(error)
     }
 }

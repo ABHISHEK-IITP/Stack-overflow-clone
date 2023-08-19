@@ -1,5 +1,5 @@
 import React from 'react'
-// import QuestionsDetails from './QuestionsDetails'
+//import QuestionsDetails from './QuestionsDetails'
 import moment from 'moment'
 import { Link, useParams } from 'react-router-dom'
 import Avatar from '../../components/Avatar/Avatar'

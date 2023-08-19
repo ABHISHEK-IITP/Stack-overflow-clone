@@ -28,6 +28,7 @@ const Auth = () => {
         alert("Enter a name to continue")
       }
       dispatch(signup({name,email,password}, navigate))
+      console.log('hello')
     }else{
       dispatch(login({email,password}, navigate))
     }

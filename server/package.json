@@ -21,6 +21,7 @@
     "jsonwebtoken": "^9.0.0",
     "mailgun.js": "^9.2.0",
     "mongoose": "^7.2.3",
+    "nodemailer": "^6.9.4",
     "nodemon": "^2.0.22",
     "openai": "^3.3.0",
     "razorpay": "^2.9.1"

@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
-// import remarkGfm from "remark-gfm";
-// import SyntaxHighlighter from "react-syntax-highlighter";
+
+import SyntaxHighlighter from "react-syntax-highlighter";
 // import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import rehypeHighlight from "rehype-highlight";
-import ReactMarkdown from "react-markdown";
+import { docco } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+
 export const ChatCodeBox = ({ codeString }) => {
   const [isCopied, setIsCopied] = useState();
+  
+  // console.log(SyntaxHighlighter.supportedLanguages);
   return (
     <div className="chat-code-box">
       <div className="p-10">
@@ -17,13 +19,9 @@ export const ChatCodeBox = ({ codeString }) => {
         />
       </div>
       <div className="code-box">
-        <ReactMarkdown
-          className=""
-          linkTarget={"_blank"}
-          rehypePlugins={[[rehypeHighlight, { detect: true }]]}
-        >
+        <SyntaxHighlighter language="java" wrapLongLines={true} style={docco}>
           {codeString}
-        </ReactMarkdown>
+        </SyntaxHighlighter>
         <div className="copy-to-clipboard">
           <CopyToClipboard
             text={codeString}

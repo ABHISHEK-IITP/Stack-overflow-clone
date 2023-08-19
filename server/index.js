@@ -3,12 +3,13 @@ import mongoose from 'mongoose'
 import cors from  'cors'
 import dotenv from "dotenv"
 
-import userRoutes from "./routes/users.js";
-import questionRoutes from "./routes/Questions.js";
-import answerRoutes from "./routes/Answers.js";
+import userRoutes from './routes/users.js'
+import questionRoutes from './routes/Questions.js'
+import answerRoutes from './routes/Answers.js'
+import subsroutes from './routes/Subsroutes.js'
 import chatRoutes from "./routes/ChatAi.js";
-import socialRoutes from "./routes/Social.js";
-import subsRoutes from "./routes/subscription.js";
+import otpRoutes from "./routes/Otp.js";
+
 // import connectDB from "./connectMongoDb.js"
 
 dotenv.config();
@@ -23,13 +24,12 @@ app.get('/', (req ,res)=>{
     res.send("This is stack overflow clone API")
 })
 
-app.use("/chat/", chatRoutes);
-app.use("/user/", userRoutes);
-app.use("/questions/", questionRoutes);
-app.use("/answer/", answerRoutes);
-app.use("/social/post/", socialRoutes);
-app.use("/subscription", subsRoutes);
-
+app.use('/user',userRoutes)
+app.use('/question', questionRoutes)
+app.use('/answer', answerRoutes)
+app.use('/subscription', subsroutes)
+app.use('/chat', chatRoutes)
+app.use('/otp', otpRoutes)
 
 const PORT= process.env.PORT || 5000
 
