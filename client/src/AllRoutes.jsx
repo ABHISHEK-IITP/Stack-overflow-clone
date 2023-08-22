@@ -13,7 +13,7 @@ import UserProfile from "./pages/UserProfile/UserProfile";
 import Subscription from './pages/Subscription/Subscription'
 import ChatAI from "./pages/ChatAI/ChatAI";
 
-const AllRoutes = ({ slideIn, handleSlideIn }) => {
+const AllRoutes = () => {
   return (
     <div>
         <Routes>
