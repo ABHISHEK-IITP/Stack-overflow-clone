@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import axios from "axios";
-import Chat from "../models/ChatAi.js";
+import Chat from "../models/chatAi.js";
 
 export const postChat = async (req, res) => {
     const {userId, message} = req.body;
