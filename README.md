@@ -17,7 +17,7 @@ The Stack Overflow Clone is a full-stack web application designed to replicate t
 - **User Directory:** A dedicated page displays all registered users, fostering a sense of community.
 - **Subscription Tiers:** Three subscription tiers—free, silver, and premium—offer various posting capabilities.
 - **Payment Integration:** Integration with Razorpay for seamless payment processing.
-- **Chatbot:** An AI-driven chatbot for instant user queries, enhancing user engagement.
+
 
 ## Technologies Used
 
